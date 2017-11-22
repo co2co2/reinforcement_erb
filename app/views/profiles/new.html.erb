@@ -1,4 +1,4 @@
-<label for="email">email</label>
+<!-- <label for="email">email</label>
 <input type="text" name="email" id="email" class="fancy_form" >
 
 <label for="username">username</label>
@@ -14,4 +14,50 @@
 <input type="text" name="address" id="address" class="fancy_form" >
 
 <label for="alias">alias</label>
-<input type="text" name="alias" id="alias" class="fancy_form" >
+<input type="text" name="alias" id="alias" class="fancy_form" > -->
+
+<%= form_tag '/profiles' do %>
+  <%= label_tag :email %>
+  <%= text_field_tag :email %>
+
+  <%= label_tag :username %>
+  <%= text_field_tag :username %>
+
+  <%= label_tag :pin %>
+  <%= text_field_tag :pin %>
+
+  <%= label_tag :website %>
+  <%= text_field_tag :website %>
+
+  <%= label_tag :address %>
+  <%= text_field_tag :address %>
+
+  <%= label_tag :alias %>
+  <%= text_field_tag :alias %>
+
+  <%= submit_tag %>
+<% end %>
+<!--
+<%= form_for Profile.new do |f| %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :username %>
+    <%= form_helper.text_field :username %>
+
+    <%= f.label :pin %>
+    <%= form_helper.text_field :pin %>
+
+    <%= f.label :website %>
+    <%= form_helper.text_field :website %>
+
+    <%= f.label :address %>
+    <%= form_helper.text_field :address %>
+
+    <%= f.label :alias %>
+    <%= form_helper.text_field :alias %>
+
+    <%= f.submit %>
+
+<% end %> -->
